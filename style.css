@@ -1,0 +1,514 @@
+:root{
+    --black: #030303;
+    --brown: #7A746E;
+    --white:  #FFFFFF;
+    --creamy: #FFF7F0;
+    --blue: #755CDE;
+    --yellow: #F6A560;
+    --pink: #F39E9E;
+    --light_red: #EB7565;
+    --cyan: #61C4B7;
+    --dark_purple: #552049;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background: var(--creamy);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+header,
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem 2rem;
+}
+
+.btn {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--creamy);
+    padding: .5rem 1.6875rem;
+    border-radius: 28px;
+    border: none;
+}
+
+.btn-header,
+.btn-footer {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--creamy);
+    padding: .5rem 1.6875rem;
+    background: var(--black);
+    border-radius: 28px;
+    
+}
+
+.btn-header:hover,
+.btn-footer:hover {
+    background: var(--blue);
+    cursor: pointer;
+}
+
+.solution {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.solution h1 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.835rem;
+    color: var(--black);
+    margin-top: 2rem;
+}
+
+.solution p {
+    font-weight: 500;
+    line-height: 1.625rem;
+    color: var(--brown);
+    margin-top: 1rem;
+}
+
+
+.skill {
+    position: relative;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+}
+
+.skill img {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.title {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.89rem;
+    color: var(--creamy);
+}
+
+.graphic-design {
+    background: var(--blue);
+    height: 364px;
+    width: 343px;
+}
+
+.ui-ux {
+    background: var(--yellow);
+    height: 182px;
+    width: 159px;
+}
+
+.apps {
+    background: var(--pink);
+    width: 159px;
+    height: 182px;
+}
+
+.photography {
+    background: var(--cyan);
+    width: 343px;
+    height: 158px;
+}
+
+
+.illustrations {
+    background: var(--light_red);
+    width: 343px;
+    height: 182px;
+}
+
+.motion-graphics {
+    background: var(--dark_purple);
+    width: 343px;
+    height: 182px;
+}
+
+.inner-skills {
+    display: flex;
+    gap: 25px;
+}
+
+.profile {
+    margin-top: 6.25rem;
+}
+
+#profile-image {
+   width: 300px;
+   display: block;
+   margin: 0 auto;
+}
+
+.personal-information {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.personal-information h2 {
+    font-weight: 700;
+    font-size: 1.625rem;
+    color: var(--black);
+}
+
+.personal-information p {
+    margin-block: 2rem;
+    font-weight: 500;
+    color: var(--brown);
+}
+
+.btn-profile,
+.btn-contact {
+    background-color: var(--light_red);
+}
+
+.btn-profile:hover,
+.btn-contact:hover {
+    background: var(--yellow);
+    cursor: pointer;
+}
+
+.my-work {
+    text-align: center;
+    margin-top: 6.25rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.gallery {
+    max-width: 270px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+
+.slide-item.hidden {
+    display: none;
+}
+  
+.slide-item.visible {
+    display: block;
+}
+
+.slide1 {
+    display: block;
+    animation: fadeVisibility .5s ease-in-out;
+}
+
+.slide-item img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.arrows {
+    background-color: var(--black);
+    padding: 1.5rem;
+    display: inline;
+    border-radius: 50%;
+    margin: 2rem .5rem 0 .5rem;
+}
+
+.arrows:hover {
+    background: var(--blue);
+    cursor: pointer;
+}
+
+.contact {
+    text-align: center;
+    background: var(--black);
+    border-radius: 10px;
+    color: var(--creamy);
+    padding: 3rem 1.5rem;
+    margin-top: 6.25rem;
+}
+
+.contact h2 {
+    font-size: 1.625rem;
+}
+
+.contact p {
+    padding-block: 1.5rem;
+}
+
+footer {
+    margin-top: 2.5rem;
+}
+
+/* media */
+
+@media (min-width:768px) {
+    body {
+        margin: 2.4375rem;
+    }
+
+    header,
+    footer,
+    .solution,
+    .skills,
+    .profile,
+    .my-work,
+    .contact-container {
+        max-width: 690px;
+        margin: 0 auto;
+    }
+
+    .solution h1 {
+        font-size: 2.75rem;
+        line-height: 3.465rem;
+        margin-top: 4rem;
+    }
+    
+    .solution p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        margin-top: 1.6875rem;
+    }
+
+    .skills {
+        margin-top: 5rem;
+    }
+    
+    .upper-skills,
+    .lower-skills {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+
+    .graphic-design {
+        width: 333px;
+        height: auto;
+    }
+
+    .ui-ux {
+        width: 155px;
+    }
+
+    .apps {
+        width: 155px;
+    }
+
+    .illustrations {
+        width: 333px;
+    }
+
+    .photography {
+        width: 333px;
+        height: auto;
+    }
+
+    .motion-graphics {
+        width: 333px;
+    }
+
+    .profile {
+        display: flex;
+        gap: 2.3rem;
+        margin-top: 7.5rem;
+    }
+
+    #profile-image {
+        width: 364px;
+        position: relative;
+        right: 100px;
+    }
+
+    .personal-information {
+        text-align: left;
+    }
+
+    .personal-information h2 {
+        font-size: 2rem;
+        line-height: 2.52rem;
+    }
+
+    .personal-information p {
+        margin-block: 1.5rem;
+        font-size: 1.125rem;
+    }
+
+    .my-work{
+        margin-top: 7.5rem;
+    }
+
+    .my-work h3{
+        font-size: 2rem;
+    }
+
+    .gallery{
+        margin-top: 3.5rem;
+        max-width: 540px;
+    }
+
+    
+    .arrows{
+        margin-top: 3.5rem;
+    }
+
+    .contact{
+        padding: 3.5rem 4.6875rem;
+        margin-top: 7.5rem;
+    }
+
+    .contact h2{
+        font-size: 2rem;
+    }
+    
+    .contact p{
+        font-size: 1.125rem;
+    }
+
+    .btn-contact{
+        margin-top: 1.625rem;
+    }
+
+    footer{
+        margin-top: 3.5rem;
+    }
+
+    .btn {
+        font-size: 15px;
+    }
+
+   
+
+    
+}
+
+
+@media (min-width:1200px) {
+    header,
+    footer,
+    .solution,
+    .skills,
+    .profile,
+    .my-work,
+    .contact-container{
+        margin-inline: 10.3125rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .solution h1{
+        font-size: 3.5rem;
+        line-height: 4.41rem;
+        margin-top: 4.125rem;
+    }
+
+    .solution p{
+        line-height: 1.75rem;
+        margin-top: 1.6875rem;
+    }
+
+    .skills{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 5rem;
+    }
+
+    .lower-skills{
+        display: flex;
+        flex-direction: column;
+    }
+   
+    .graphic-design {
+        height: 388px;
+        margin-top: 0;
+    }
+   
+
+    .apps,
+    .ui-ux,
+    .photography,
+    .illustrations,
+    .motion-graphics{
+        height: 182px;
+        margin-top: 0px;
+    }
+
+    .illustrations {
+            margin-top: 1.5rem;
+    }
+
+    .profile{
+        margin-top: 8.5rem;
+    }
+
+    #profile-image{
+        width: 364px;
+        position: relative;
+        right: 0px;
+        width: 300px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .my-work{
+        margin-top: 5.5rem;
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4.5rem 4.0625rem;
+        max-width: 1000px;
+        margin-top: 5.5rem;
+    }
+
+    .book-call {
+        text-align: left;
+        max-width: 540px;
+    }
+
+    .contact h2{
+        font-size: 2.5rem;
+    }
+
+    footer{
+        margin-top: 3.5rem;
+    }
+
+    .btn {
+        font-size: 20px ;
+    }
+}
